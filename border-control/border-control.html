@@ -61,9 +61,13 @@
 <body>
 	<div id="container">
 		<h1>Possible drugs import routes?</h1>
-		<p>What are the possible options to import a lot of goods into a country?
-        </br>These thougs have stuck in your head for a while now, about the imports.
-        </br>Many imports and transportations of the goods are carried out by a ... ?</p>
+		<p>    You quickly start planning your next steps, and you decide that the first thing you need to do is to gather as much information about the criminal syndicate as possible. You search for any clues or hints that could lead you to their location or members.
+		</br></br>
+			As you browse through the file, you notice a section titled "Delivery Schedule" which contains a list of dates and times for the upcoming drug deliveries. This information could be crucial in stopping the syndicate, so you focus your attention on the list.
+		</br></br>
+			However, it has been damaged, and you'll need to spend some time to restore it. You try to use various techniques to recover the list, but nothing seems to work. Finally, you decide to take a break and change the approach. 
+		</br><br>
+			And you started thinking what possible ways are there to import a lot of good into a country? By which type of transportation? </p>
 		<input type="text" id="answerInput" placeholder="Enter answer here">
 		<button onclick="checkAnswer()">Submit</button>
 		<button onclick="showHint()">Hint</button>
@@ -73,7 +77,7 @@
 	<script>
 		// array of correct answers
 		const answers = ["ship", "plane", "truck"];
-        const hints = ["Does 'EVERGREEN' ring any bells to you?", "People usually get drunk before traveling by this.", "You could call it the most ancient type of transportation"];
+        const hints = ["Does 'EVERGREEN' ring any bells to you?", "People usually get drunk before traveling by this.", "Shipping goods by road wouldn't be possible without a ...?"];
         let currentIndex = 0;
         const input = document.getElementById("answerInput");
 		input.addEventListener("keydown", function(event) {
@@ -86,7 +90,8 @@
 		function checkAnswer() {
 			const input = document.getElementById("answerInput");
 			const answerList = document.getElementById("answerList");
-			const answer = input.value.toLowerCase();
+			const byRegex = /^by /i;
+			const answer = input.value.toLowerCase().replace(byRegex, '');
 			const index = answers.indexOf(answer);
 			if (index !== -1) {
                 answers.splice(index, 1);
@@ -96,7 +101,7 @@
                 if (answers.length === 0) {
 					input.disabled = true;
 					alert("Nice job! Time to move to the next step.");
-                    window.location.href = 'movement.html'    
+                    window.location.href = 'import-city.html'    
 				} else { 
                     alert("This is a good idea. What else options there are?"); 
                 }

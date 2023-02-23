@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Import City</title>
+	<style>
+		body {
+			background-color: #222;
+			color: #fff;
+			font-family: sans-serif;
+		}
+		
+		#container {
+			margin: auto;
+			margin-top: 50px;
+			width: 50%;
+			padding: 20px;
+			border: 2px solid #fff;
+			border-radius: 10px;
+			text-align: center;
+		}
+		
+		input[type="text"] {
+			padding: 10px;
+			border: none;
+			background-color: #333;
+			color: #fff;
+			font-size: 16px;
+			width: 80%;
+			border-radius: 10px;
+		}
+		
+		button {
+			background-color: #555;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			font-size: 16px;
+			border-radius: 10px;
+			margin-top: 10px;
+			cursor: pointer;
+		}
+		
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			margin-top: 20px;
+			text-align: left;
+		}
+		
+		ul li {
+			margin-bottom: 5px;
+		}
+		
+		ul li .tick {
+			color: green;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1>Schedules, schedules, schedules</h1>
+		<p> Unfortunately, the Delivery Schedule file you have recovered is still damaged.
+		</br></br>
+			You carefully examine the file and try various techniques to recover the information. After hours of work, you finally manage to restore the file to some extent. However, some parts of the list are still missing, and you need to use your detective skills to fill in the gaps.
+		</br></br>
+			You study the restored list closely and try to match it with the schedules of all near dated ship, plane and truck deliveries you have obtained. You start by comparing the dates and times of the shipments with the schedules of the three modes of transportation. 
+		</br></br>
+			As you go through the list, you excpect to start noticing patterns and connections between the shipments and the modes of transportation.
+		</br></br>
+			You look for any coincidences in the schedules and try to match them with the shipments form the file. With your attention to detail and problem-solving skills, you gradually piece together the missing information.
+		</p>
+			<input type="text" id="answerInput" placeholder="What is the city where are the deliveries come in?">
+			<button onclick="checkAnswer()">Submit</button>
+		<button onclick="showHint()">Hint</button>
+		<ul id="answerList"></ul>
+	</div>
+	
+	<script>
+		// array of correct answers
+		const answers = ["gdynia"];
+        const hints = ["I've got a feeling that the cold Baltic winds may bring bad things to us..."];
+        let currentIndex = 0;
+		const input = document.getElementById("answerInput");
+		input.addEventListener("keydown", function(event) {
+  			if (event.keyCode === 13) {checkAnswer();	}
+			});
+        
+		
+		// function to check answer
+		function checkAnswer() {
+			const input = document.getElementById("answerInput");
+			const answerList = document.getElementById("answerList");
+			const answer = input.value.toLowerCase();
+			
+			if (answer.includes("gdynia")) {
+				
+					input.disabled = true;
+					alert("Spot on! With this in mind you proceed to the next clue.");
+                    window.location.href = pageUrl
+				
+				
+			} else{
+				alert("This doesn't seem to stick. Any more ideas?");
+			}
+            document.getElementById("answerInput").value = ""
+		}
+		
+		// function to show hint
+		function showHint() {
+			const input = document.getElementById("answerInput");
+            
+            let currentItem = hints[currentIndex];
+            currentIndex = (currentIndex + 1) % hints.length;
+
+			input.value = currentItem;
+		}
+	</script>
+</body>
+</html>
