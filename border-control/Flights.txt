@@ -1,0 +1,51 @@
+Date	Flight Number	Departure Airport	Arrival Airport	Airline
+Jul 1, 2023	ABC123	New York, USA	London, UK	Delta Airlines
+Jul 3, 2023	XYZ456	London, UK	Tokyo, Japan	British Airways
+Jul 5, 2023	DEF789	Sydney, Australia	Dubai, UAE	Emirates
+Jul 7, 2023	GHI123	Dubai, UAE	Johannesburg, SA	Qatar Airways
+Jul 9, 2023	JKL456	Mexico City, Mexico	Madrid, Spain	Iberia
+Jul 11, 2023	MNO789	Paris, France	New York, USA	Air France
+Jul 13, 2023	PQR123	Istanbul, Turkey	Mumbai, India	Turkish Airlines
+Jul 15, 2023	STU456	Los Angeles, USA	Gdask, Poland	American Airlines
+Jul 17, 2023	VWX789	Beijing, China	Sydney, Australia	Air China
+Jul 19, 2023	YZA123	Sao Paulo, Brazil	Frankfurt, Germany	Lufthansa
+Jul 21, 2023	BCD456	Amsterdam, Netherlands	Hong Kong, China	KLM Royal Dutch Airlines
+Jul 23, 2023	EFG789	Hong Kong, China	Singapore, Singapore	Cathay Pacific
+Jul 25, 2023	HIJ123	Moscow, Russia	Bangkok, Thailand	Aeroflot
+Jul 27, 2023	KLM456	Toronto, Canada	Sydney, Australia	Air Canada
+Jul 29, 2023	NOP789	Seoul, South Korea	Sydney, Australia	Korean Air
+Aug 1, 2023	QRS123	Mumbai, India	Tokyo, Japan	Air India
+Aug 3, 2023	TUV456	Rio de Janeiro, Brazil	Rome, Italy	Alitalia
+Aug 5, 2023	WXY789	Helsinki, Finland	Los Angeles, USA	Finnair
+Aug 7, 2023	ZAB123	Bangkok, Thailand	Sydney, Australia	Thai Airways
+Aug 9, 2023	CDE456	Sydney, Australia	Vancouver, Canada	Qantas
+Aug 11, 2023	FGH789	Shanghai, China	Munich, Germany	Lufthansa
+Aug 13, 2023	IJK123	Istanbul, Turkey	Toronto, Canada	Turkish Airlines
+Aug 15, 2023	LMN456	Paris, France	Gdask, Poland	Air France
+Aug 17, 2023	OPQ789	New York, USA	Beijing, China	Delta Airlines
+Aug 19, 2023	RST123	Tokyo, Japan	San Francisco, USA	ANA All Nip
+Apr 1, 2023	AC216	Toronto	Vancouver	Air Canada
+Apr 2, 2023	UA104	Los Angeles	New York	United Airlines
+Apr 3, 2023	BA249	London	Sydney	British Airways
+Apr 4, 2023	AF055	Paris	Mumbai	Air France
+Apr 5, 2023	SQ448	Singapore	Gdask, Poland	Singapore Airlines
+Apr 6, 2023	LH414	Frankfurt	Beijing	Lufthansa
+Apr 7, 2023	AA122	Dallas	London	American Airlines
+Apr 8, 2023	CZ302	Beijing	Moscow	China Southern Airlines
+Apr 9, 2023	EK905	Dubai	New York	Emirates
+Apr 10, 2023	TK181	Istanbul	Gdask, Poland	Turkish Airlines
+Apr 11, 2023	QF009	Sydney	Los Angeles	Qantas
+Apr 12, 2023	KL121	Amsterdam	Shanghai	KLM
+Apr 13, 2023	CX888	Hong Kong	San Francisco	Cathay Pacific
+Apr 14, 2023	DL201	Atlanta	Paris	Delta Airlines
+Apr 15, 2023	MU588	Shanghai	New York	China Eastern Airlines
+Apr 16, 2023	AY141	Helsinki	New York	Finnair
+Apr 17, 2023	KE065	Seoul	Los Angeles	Korean Air
+Apr 18, 2023	JL007	Tokyo	New York	Japan Airlines
+Apr 19, 2023	TG321	Bangkok	London	Thai Airways
+Apr 20, 2023	EY101	Abu Dhabi	Gdask, Poland	Etihad Airways
+Apr 21, 2023	CX465	Hong Kong	Bangkok	Cathay Pacific
+Apr 22, 2023	UA781	San Francisco	Tokyo	United Airlines
+Apr 23, 2023	KL701	Amsterdam	New York	KLM
+Apr 24, 2023	AC220	Montreal	London	Air Canada
+Apr 25, 2023	EK415	Sydney	Gdask, Poland	Emirates

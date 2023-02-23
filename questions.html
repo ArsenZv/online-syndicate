@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz Game</title>
+	<style>
+		body {
+			background-color: #2d2d2d;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		h1 {
+			margin-top: 50px;
+		}
+		
+		input[type="text"] {
+			background-color: #202020;
+			border: none;
+			color: #fff;
+			padding: 10px;
+			margin: 20px;
+			font-size: 20px;
+			width: 300px;
+		}
+		
+		button {
+			background-color: #aabbcc;
+			border: none;
+			color: #fff;
+			padding: 10px;
+			margin: 20px;
+			font-size: 20px;
+			cursor: pointer;
+		}
+		
+		button:hover {
+			background-color: #778899;
+		}
+		
+		img {
+			width: 150px;
+			height: 150px;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<img src="cartel-logo.png">
+	<h1>Quiz Game</h1>
+	<p>Enter the correct answers below:</p>
+	<input type="text" id="answer-input">
+	<button onclick="checkAnswer()">Submit</button>
+	<script>
+		var answers = ["Apple", "Banana", "Cherry", "Grape", "Orange"];
+		function checkAnswer() {
+			var input = document.getElementById("answer-input").value;
+			var correctAnswer = false;
+			for (var i = 0; i < answers.length; i++) {
+				if (input === answers[i]) {
+					answers.splice(i, 1);
+					correctAnswer = true;
+					break;
+				}
+			}
+			if (correctAnswer) {
+				alert("Correct answer! Keep going!");
+			} else {
+				alert("Wrong answer! Try again.");
+			}
+			if (answers.length === 0) {
+				alert("Congratulations! You've entered all the correct answers!");
+			}
+			document.getElementById("answer-input").value = ""; // clears the input field
+		}
+	</script>
+</body>
+</html>
