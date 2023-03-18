@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Border Control</title>
+	<style>
+		body {
+			background-color: #222;
+			color: #fff;
+			font-family: sans-serif;
+		}
+		
+		#container {
+			margin: auto;
+			margin-top: 50px;
+			width: 50%;
+			padding: 20px;
+			border: 2px solid #fff;
+			border-radius: 10px;
+			text-align: center;
+		}
+		
+		input[type="text"] {
+			padding: 10px;
+			border: none;
+			background-color: #333;
+			color: #fff;
+			font-size: 16px;
+			width: 80%;
+			border-radius: 10px;
+		}
+		
+		button {
+			background-color: #555;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			font-size: 16px;
+			border-radius: 10px;
+			margin-top: 10px;
+			cursor: pointer;
+		}
+		
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			margin-top: 20px;
+			text-align: left;
+		}
+		
+		ul li {
+			margin-bottom: 5px;
+		}
+		
+		ul li .tick {
+			color: green;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1>Where next?</h1>
+		<p> Unfortunately, the Delivery Schedule file you have recovered is still damaged.
+		</br></br>
+			Now that you figured out where it's coming into the country, you need to find out where do they move them next?
+        </br></br>
+            You've been able to obtain another file that seems to be related to the further movement of the so called «sweets».
+        </br></br>
+            Have a look at it, can you pull out any sense of it? Will you be able to find their destinations?
+		</p>
+        <div style="text-align: left;">
+			Clue: 
+			<ul>
+				<li><a href="di-e-t-ons.txt" target="_blank">di-e-t-ons.txt</a></li>
+			</ul>
+		</div>
+		<input type="text" id="answerInput" placeholder="Enter answer here">
+		<button onclick="checkAnswer()">Submit</button>
+		<button onclick="showHint()">Hint</button>
+		<ul id="answerList"></ul>
+	</div>
+	
+	<script>
+		// array of correct answers
+		const answers = ["bydgoszcz", "katowice", "lublin"];
+        const hints = ["I think it's something big in Kujawsko-Pomorskie Voivodeship", "The capital city of the Silesian Voivodeship", "The ninth-largest city in Poland and the second-largest city"];
+        let currentIndex = 0;
+        const input = document.getElementById("answerInput");
+		input.addEventListener("keydown", function(event) {
+  			if (event.keyCode === 13) {checkAnswer();	}
+		});
+        
+        
+		
+		// function to check answer
+		function checkAnswer() {
+			const input = document.getElementById("answerInput");
+			const answerList = document.getElementById("answerList");
+			const byRegex = /^by /i;
+			const answer = input.value.toLowerCase().replace(byRegex, '');
+			const index = answers.indexOf(answer);
+			if (index !== -1) {
+                answers.splice(index, 1);
+                hints.splice(index, 1);
+				answerList.innerHTML += `<li><span class="tick">&#10004;</span>${answer}</li>`;
+				input.value = "";
+                if (answers.length === 0) {
+					input.disabled = true;
+					alert("Nice job! Time to move to the next step.");
+                    window.location.href = 'import-city.html'    
+				} else { 
+                    alert("Good job! What else could you find?"); 
+                }
+			} else {
+				alert("This doesn't seem to make sense... Try again");
+			}
+            document.getElementById("answerInput").value = "";
+            document.getElementById("answerInput").focus();
+
+		}
+		
+		// function to show hint
+		function showHint() {
+			const input = document.getElementById("answerInput");
+            
+            let currentItem = hints[currentIndex];
+            currentIndex = (currentIndex + 1) % hints.length;
+
+			input.value = currentItem;
+		}
+	</script>
+</body>
+</html>

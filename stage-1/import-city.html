@@ -50,11 +50,18 @@
 		
 		ul li {
 			margin-bottom: 5px;
+			color: aqua;
+			display: inline-block;
+  			margin-right: 10px; /* Add some spacing between the items */
 		}
 		
 		ul li .tick {
 			color: green;
 			margin-right: 10px;
+		}
+
+		a {
+			color:darkcyan;
 		}
 	</style>
 </head>
@@ -71,6 +78,21 @@
 		</br></br>
 			You look for any coincidences in the schedules and try to match them with the shipments form the file. With your attention to detail and problem-solving skills, you gradually piece together the missing information.
 		</p>
+		<div style="text-align: left;">
+			Recovered file: 
+			<ul>
+				<li><a href="Sweets.txt" target="_blank">Sweets.txt</a></li>
+			</ul>
+		</div>
+		<div style="text-align: left;">
+			Schedules:
+			<ul>
+				<li><a href="Trucks.txt" target="_blank">Trucks.txt</a></li>
+				<li><a href="Flights.txt" target="_blank">Flights.txt</a></li>
+				<li><a href="Ships.txt" target="_blank">Ships.txt</a></li>
+			</ul>
+		</div>
+
 			<input type="text" id="answerInput" placeholder="What is the city where are the deliveries come in?">
 			<button onclick="checkAnswer()">Submit</button>
 		<button onclick="showHint()">Hint</button>
@@ -98,7 +120,7 @@
 				
 					input.disabled = true;
 					alert("Spot on! With this in mind you proceed to the next clue.");
-                    window.location.href = pageUrl
+                    window.location.href = '../Stage-2/Where-next.html'
 				
 				
 			} else{
