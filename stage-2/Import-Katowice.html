@@ -60,19 +60,20 @@
 </head>
 <body>
 	<div id="container">
-		<h1>Where next?</h1>
-		<p> Unfortunately, the Delivery Schedule file you have recovered is still damaged.
+		<h1>New City, Fresh Mysteries</h1>
+		<p> Having amassed a trove of chat history from your target, you're now in a different city, poised to delve into another layer of intrigue. Guided by AI insights, you'll unravel the connection among recurring locations. These places hold a common thread, waiting for your detective's touch.
 		</br></br>
-			Now that you figured out where it's coming into the country, you need to find out where do they move them next?
+			As you journey through this city's digital landscape, keep in mind the patterns you've honed in previous missions. The chat history is your map, and the shared element is your compass. Let's embark on this quest to unveil the hidden truth once more.
         </br></br>
-            You've been able to obtain another file that seems to be related to the further movement of the so called «sweets».
-        </br></br>
-            Have a look at it, can you pull out any sense of it? Will you be able to find their destinations?
-		</p>
+			This time we're in Katowice, let hope for enough of luck to pull through this.
+        </p>
         <div style="text-align: left;">
-			Clue: 
+			Reccurent mentions: 
 			<ul>
-				<li><a href="di-e-t-ons.txt" target="_blank">di-e-t-ons.txt</a></li>
+				<li>* Kościół Apostołów Piotra i Pawła</li>
+				<li>* Silesian Insurgents' Monument</li>
+				<li>* Parachute Tower in Katowice</li>
+				<li>* Miejski Dom Kultury "Koszutka"</li>
 			</ul>
 		</div>
 		<input type="text" id="answerInput" placeholder="Enter answer here">
@@ -83,8 +84,8 @@
 	
 	<script>
 		// array of correct answers
-		const answers = ["bydgoszcz", "katowice", "lublin"];
-        const hints = ["It's most probably a big city in Kujawsko-Pomorskie Voivodeship", "Seems like you should give a closer look to Silesian Voivodeship, any big city there?", "Something smells fish in Lublin Voivodeship"];
+		const answers = ["park"];
+        const hints = ["Where can you find green serenity in the city's heart, with winding trails and a place where dogs frolic and children play"];
         let currentIndex = 0;
         const input = document.getElementById("answerInput");
 		input.addEventListener("keydown", function(event) {
@@ -100,23 +101,14 @@
 			const byRegex = /^by /i;
 			const answer = input.value.toLowerCase().replace(byRegex, '');
 			const index = answers.indexOf(answer);
-			if (index !== -1) {
-                answers.splice(index, 1);
-                hints.splice(index, 1);
-				answerList.innerHTML += `<li><span class="tick">&#10004;</span>${answer}</li>`;
-				input.value = "";
-                if (answers.length === 0) {
-					input.disabled = true;
-					alert("Nice job! Time to move to the next step.");
-                    window.location.href = 'Import-Bydgoszcz.html'    
-				} else { 
-                    alert("Good job! What else could you find?"); 
-                }
-			} else {
-				alert("This doesn't seem to make sense... Try again");
+			if (answer.includes("park")) {
+				input.disabled = true;
+				alert("Spot on! With this in mind you proceed to the next clue.");
+				window.location.href = '../Stage-2/Import-Lublin.html'
+			} else{
+				alert("This doesn't seem to stick. Maybe try a hint?");
 			}
-            document.getElementById("answerInput").value = "";
-            document.getElementById("answerInput").focus();
+			document.getElementById("answerInput").value = ""
 
 		}
 		
