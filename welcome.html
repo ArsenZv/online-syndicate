@@ -21,7 +21,7 @@
        margin: 35px auto;
 			 line-height: 1.5em;
 			 max-width: 80%;
-       text-align: center;
+       text-align: left;
     }
 
 		button {
@@ -45,11 +45,33 @@
 </head>
 <body>
 	<h1>Come down the rabbit hole</h1>
-  <p>As a college student, you spend most of your time surfing the internet and playing online games. One day, while browsing the web, you come across a file that piques your interest. The file seems to be encrypted, and you find yourself trying to crack the code.
-
-    After hours of trying, you finally unlock the file, and to your shock, it contains detailed information about a criminal syndicate involved in trafficking narcotics into some of the European countries. You realize the danger of the situation and decide to take matters into your own hands.
-  </p>
-	<button onclick="window.location.href = 'stage-1/border-control.html'">Begin</button>
+  <p id="storyText">As a college student, you spend most of your time surfing the internet and playing online games. </p>
 	<audio src="welcome-ost.mp3" autoplay loop></audio>
+
+	<script>
+		const storyText = "The digital world is your playground, and you've mastered every virtual realm you've ventured into. However, beneath the surface of this seemingly ordinary life, an insatiable curiosity burns within you. One day, while deep into your online adventures, you stumble upon a cryptic message buried in the darkest corners of the web. It's a file like no other, hidden behind layers of encryption and shrouded in secrecy. The file beckons to you, its digital presence palpable even through the cold glow of your computer screen.\
+		Intrigued, you accept the challenge it presents. This enigmatic puzzle becomes an obsession, consuming your days and nights. You dive headfirst into the world of cryptography, learning to decipher codes and crack ciphers, all in pursuit of the elusive truth concealed within that mysterious file.\
+		As the weeks turn into months, you slowly but surely make progress. The file's secrets begin to unravel, revealing hints of a clandestine organization and their nefarious activities. You realize that you hold in your hands the key to something much bigger than you ever imagined.\
+		The pieces of the puzzle fall into place, leading you on a trail of breadcrumbs that spans the virtual and physical worlds. Little do you know that this journey will soon take you beyond the confines of your computer screen and thrust you into a real-world adventure that will challenge your skills, courage, and determination.\
+		Now, as you stand on the precipice of a new chapter, the file is finally unlocked. It contains detailed information about a criminal syndicate involved in trafficking narcotics into some of the European countries. The danger is real, and you know that you must take matters into your own hands.\
+		The time has come to venture out into the world, to follow the clues and confront the shadows that lurk in the darkest alleys. Armed with your newfound knowledge and a burning desire for justice, you prepare to descend into the depths of the rabbit hole. Your journey is about to begin.";
+
+		let currentWordIndex = 0;
+		const words = storyText.split(' ');
+
+		function showNextWord() {
+			const storyParagraph = document.getElementById('storyText');
+			if (currentWordIndex < words.length) {
+				storyParagraph.textContent += ' ' + words[currentWordIndex];
+				currentWordIndex++;
+				setTimeout(showNextWord, 475); // Adjust the delay (in milliseconds) between words.
+			} else {
+				document.querySelector('button').style.display = 'none';
+			}
+		}
+
+		// Automatically start showing the text when the page loads.
+		showNextWord();
+	</script>
 </body>
 </html>
