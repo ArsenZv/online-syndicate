@@ -132,7 +132,7 @@
 	<script>
 		// array of correct answers
 		const answers = ["Jakub Kowalski", "Ewa Nowak", "Janusz Mazur"];
-        const hints = ["The most popular meme and the most popular resort", ];
+        const hints = ["Maybe top 10 Polish sur/names might help you","Is this a man's businnes only?","The most popular meme and none less popular resort","Words are just letters arranged in a specific sequence, you need to find the right one"];
 		const idDetails = ["Jakub-Kowalski.html","Ewa-Nowak.html","Janusz-Mazur.html"]
         let currentIndex = 0;
         const input = document.getElementById("answerInput");
@@ -146,12 +146,9 @@
 		function checkAnswer() {
 			const input = document.getElementById("answerInput");
 			const answerList = document.getElementById("answerList");
-			const byRegex = /^by /i;
 			const answer = input.value;
 			const index = answers.indexOf(answer);
 			const detailsLink = idDetails[index];
-			console.log(answer);
-			console.log(answers);
 			if (index !== -1) {
                 answers.splice(index, 1);
                 hints.splice(index, 1);
