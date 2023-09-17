@@ -1,48 +1,48 @@
-Date	Port of Departure	Port of Arrival	Ship Name
-Mar 1, 2023	New York, USA	Southampton, UK	Oceanic Voyager
-Mar 5, 2023	Southampton, UK	Gdansk, Poland	Azure Sea
+Date	        Port of Departure	Port of Arrival	Ship Name
+Mar 1, 2023	    New York, USA	Southampton, UK	Oceanic Voyager
+Mar 5, 2023	    Southampton, UK	Gdansk, Poland	Azure Sea
 Mar 10, 2023	Gdansk, Poland	Naples, Italy	Mediterranean Breeze
 Mar 15, 2023	Naples, Italy	Gdynia, Poland	Baltic Sea
 Mar 20, 2023	Athens, Greece	Alexandria, Egypt	Nile Explorer
 Mar 25, 2023	Alexandria, Egypt	Dubai, UAE	Arabian Sun
 Mar 30, 2023	Dubai, UAE	Mumbai, India	Eastern Star
-Apr 5, 2023	Mumbai, India	Singapore, Singapore	Pacific Breeze
+Apr 5, 2023	    Mumbai, India	Singapore, Singapore	Pacific Breeze
 Apr 10, 2023	Singapore, Singapore	Sydney, Australia	Southern Cross
 Apr 15, 2023	Sydney, Australia	Gdynia, Poland	Baltic Sea
 Apr 20, 2023	Gdynia, Poland	Gdansk, Poland	Pacific Explorer
 Apr 25, 2023	Gdansk, Poland	Vancouver, Canada	North Pacific
 Apr 30, 2023	Vancouver, Canada	Los Angeles, USA	Coastal Star
-May 5, 2023	Los Angeles, USA	Puerto Vallarta, Mexico	Baja Sea
+May 5, 2023	    Los Angeles, USA	Puerto Vallarta, Mexico	Baja Sea
 May 10, 2023	Puerto Vallarta, Mexico	Acapulco, Mexico	Pacifica
 May 15, 2023	Acapulco, Mexico	Gdynia, Poland	Baltic Sea
 May 20, 2023	Gdynia, Poland	Cartagena, Colombia	Caribbean Breeze
 May 25, 2023	Cartagena, Colombia	Rio de Janeiro, Brazil	Amazon Explorer
 May 30, 2023	Rio de Janeiro, Brazil	Buenos Aires, Argentina	Tango Sea
-Jun 5, 2023	Buenos Aires, Argentina	Montevideo, Uruguay	La Plata Star
+Jun 5, 2023	    Buenos Aires, Argentina	Montevideo, Uruguay	La Plata Star
 Jun 10, 2023	Montevideo, Uruguay	Cape Town, South Africa	African Safari
 Jun 15, 2023	Cape Town, South Africa	Gdynia, Poland	Baltic Sea
 Jun 20, 2023	Gdynia, Poland	Maputo, Mozambique	Mozambique Channel
 Jun 25, 2023	Maputo, Mozambique	Mombasa, Kenya	Swahili Coast
 Jun 30, 2023	Mombasa, Kenya	Djibouti, Djibouti	Red Sea Explorer
-Jul 5, 2023	Djibouti, Djibouti	Suez, Egypt	Pharaoh's Journey
+Jul 5, 2023	    Djibouti, Djibouti	Suez, Egypt	Pharaoh's Journey
 Jul 10, 2023	Suez, Egypt	Piraeus, Greece	Aegean Odyssey
 Jul 15, 2023	Piraeus, Greece	Gdynia, Poland	Baltic Sea
 Jul 20, 2023	Istanbul, Turkey	Odessa, Ukraine	Black Sea Queen
 Jul 25, 2023	Odessa, Ukraine	Constanta, Romania	Danube Delta
 Jul 30, 2023	Constanta, Romania	Venice, Italy	Adriatic Dream
-Aug 5, 2023	Venice, Italy	Split, Croatia	Dalmatian Coast
+Aug 5, 2023	    Venice, Italy	Split, Croatia	Dalmatian Coast
 Aug 10, 2023	Split, Croatia	Kotor, Montenegro	Adriatic Pearl
 Aug 15, 2023	Kotor, Montenegro	Gdynia, Poland	Baltic Sea
 Aug 20, 2023	Dubrovnik, Croatia	Santorini, Greece	Aegean Gem
 Aug 25, 2023	Santorini, Greece	Mykonos, Greece	Greek Islander
 Aug 30, 2023	Mykonos, Greece	Naples, Italy	Mediterranean Breeze
-Sep 5, 2023	Naples, Italy	Gdansk, Poland	Atlantic Horizon
+Sep 5, 2023	    Naples, Italy	Gdansk, Poland	Atlantic Horizon
 Sep 10, 2023	Gdansk, Poland	Dublin, Ireland	Celtic Wave
 Sep 15, 2023	Dublin, Ireland	Gdynia, Poland	Nordic Explorer
 Sep 20, 2023	Gdynia, Poland	Reykjavik, Iceland	North Atlantic
 Sep 25, 2023	Halifax, Canada	New York, USA	Liberty Sea
-Oct 1, 2023	New York, USA	Fort Lauderdale, USA	Gulf Stream
-Oct 5, 2023	Fort Lauderdale, USA	Cartagena, Colombia	Caribbean Dream
+Oct 1, 2023	    New York, USA	Fort Lauderdale, USA	Gulf Stream
+Oct 5, 2023	    Fort Lauderdale, USA	Cartagena, Colombia	Caribbean Dream
 Oct 10, 2023	Cartagena, Colombia	Quito, Ecuador	Andean Explorer
 Oct 15, 2023	Quito, Ecuador	Gdynia, Poland	Baltic Sea
 Oct 20, 2023	Lima, Peru	Valparaiso, Chile	Pacific Voyager
