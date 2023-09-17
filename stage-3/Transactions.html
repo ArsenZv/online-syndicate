@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The money trail</title>
+	<style>
+		body {
+			background-color: #222;
+			color: #fff;
+			font-family: sans-serif;
+		}
+		
+		#container {
+			margin: auto;
+			margin-top: 50px;
+			width: 50%;
+			padding: 20px;
+			border: 2px solid #fff;
+			border-radius: 10px;
+			text-align: center;
+		}
+		
+		input[type="text"] {
+			padding: 10px;
+			border: none;
+			background-color: #333;
+			color: #fff;
+			font-size: 16px;
+			width: 80%;
+			border-radius: 10px;
+		}
+		
+		button {
+			background-color: #555;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			font-size: 16px;
+			border-radius: 10px;
+			margin-top: 10px;
+			cursor: pointer;
+		}
+		
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			margin-top: 20px;
+			text-align: left;
+		}
+		
+		ul li {
+			margin-bottom: 5px;
+		}
+		
+		ul li .tick {
+			color: green;
+			margin-right: 10px;
+		}
+		/* Adjust the styling as needed */
+        .list-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .list {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 25%; /* Adjust the width as needed */
+        }
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1>The money trail</h1>
+		<p> 
+			In your relentless pursuit of justice, you, the player, have painstakingly gathered all the pieces of the corrupt scheme involving the illegal smuggling of goods. Your unwavering determination and investigative skills have led you to the heart of the operation. However, there's one crucial chapter left to unfold – the hunt for the ill-gotten gains hidden away by the culprits.
+		</br></br>
+			Having recently cracked the bank accounts of the uncovered dealers, you now hold the key to unraveling the clandestine financial web they've spun. But beware, the money flows through a labyrinth of fake accounts and offshore havens, making it nearly impossible to trace. Your mission, should you choose to accept it, is to follow the elusive trail and discover the end accounts where the ill-gotten wealth is concealed.
+		</br></br></br>
+			You've obtained a data dump of recent transactions from all the suspects you've identified. The first transaction is from our prime suspect, but to trace the money and locate the last recipient ID, you need to identify a common pattern among the transactions. Dive into the data, look for similarities, and piece together the trail of money to unveil the final recipient. The key to cracking the case lies within the transactions
+		<div style="text-align: left;">
+			Combined dump of the recent transactions: 
+			<ul>
+				<li><a href="Transactions.txt" target="_blank">Transactions.txt</a></li>
+			</ul>
+		</div>
+		
+		<input type="text" id="answerInput" placeholder="What is the last recipientID?">
+		<button onclick="checkAnswer()">Submit</button>
+		<button onclick="showHint()">Hint</button>
+		<ul id="answerList"></ul>
+	</div>
+	
+	<script>
+		// array of correct answers
+		const answers = ["234567"];
+        const hints = ["Fibonacci would have discovered it if he was here","0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 now add $ to it","Try looking for the sequece between the amounts"];
+        let currentIndex = 0;
+        const input = document.getElementById("answerInput");
+		input.addEventListener("keydown", function(event) {
+  			if (event.keyCode === 13) {checkAnswer();	}
+		});
+		// function to check answer
+		function checkAnswer() {
+			const input = document.getElementById("answerInput");
+			const answerList = document.getElementById("answerList");
+			const answer = input.value;
+			if (answer.includes("234567")) {
+				input.disabled = true;
+				alert("Spot on! You finally gathered all the peaces together");
+				window.location.href = '#'
+			} else{
+				alert("This doesn't seem to stick. Any more ideas?");
+			}
+            document.getElementById("answerInput").value = "";
+            document.getElementById("answerInput").focus();
+
+		}
+		
+		// function to show hint
+		function showHint() {
+			const input = document.getElementById("answerInput");
+            
+            let currentItem = hints[currentIndex];
+            currentIndex = (currentIndex + 1) % hints.length;
+
+			input.value = currentItem;
+		}
+	</script>
+</body>
+</html>
