@@ -25,6 +25,8 @@
     }
 
 		button {
+			display: none; /* Initially hide the button */
+			margin: 0 auto; /* Center-align the button */
 			background-color: #2980b9;
 			color: #fff;
 			padding: 10px 20px;
@@ -45,15 +47,16 @@
 </head>
 <body>
 	<h1>Come down the rabbit hole</h1>
-  <p id="storyText">As a college student, you spend most of your time surfing the internet and playing online games. </p>
+  <p id="storyText">As </p>
 	<audio src="welcome-ost.mp3" autoplay loop></audio>
 
 	<script>
-		const storyText = "The digital world is your playground, and you've mastered every virtual realm you've ventured into. However, beneath the surface of this seemingly ordinary life, an insatiable curiosity burns within you. One day, while deep into your online adventures, you stumble upon a cryptic message buried in the darkest corners of the web. It's a file like no other, hidden behind layers of encryption and shrouded in secrecy. The file beckons to you, its digital presence palpable even through the cold glow of your computer screen.\
-		Intrigued, you accept the challenge it presents. This enigmatic puzzle becomes an obsession, consuming your days and nights. You dive headfirst into the world of cryptography, learning to decipher codes and crack ciphers, all in pursuit of the elusive truth concealed within that mysterious file.\
-		As the weeks turn into months, you slowly but surely make progress. The file's secrets begin to unravel, revealing hints of a clandestine organization and their nefarious activities. You realize that you hold in your hands the key to something much bigger than you ever imagined.\
-		The pieces of the puzzle fall into place, leading you on a trail of breadcrumbs that spans the virtual and physical worlds. Little do you know that this journey will soon take you beyond the confines of your computer screen and thrust you into a real-world adventure that will challenge your skills, courage, and determination.\
-		Now, as you stand on the precipice of a new chapter, the file is finally unlocked. It contains detailed information about a criminal syndicate involved in trafficking narcotics into some of the European countries. The danger is real, and you know that you must take matters into your own hands.\
+		const storyText = "a college student, you spend most of your time surfing the internet and playing online games. The digital world is your playground, and you've mastered every virtual realm you've ventured into. However, beneath the surface of this seemingly ordinary life, an insatiable curiosity burns within you. One day, while deep into your online adventures, you stumble upon a cryptic\
+		message buried in the darkest corners of the web. It's a file like no other, hidden behind layers of encryption and shrouded in secrecy.\
+		Intrigued, you accept the challenge it presents. This enigmatic puzzle becomes an obsession, consuming your days and nights.\
+		As the weeks turn into months, you slowly but surely make progress in deciphering it. The file's secrets begin to unravel, revealing hints of some organization and their illegal activities. You realize that you hold in your hands the key to something much bigger than you ever imagined.\
+		Little do you know that this journey will soon take you beyond your computer screen and take you into a real-world adventure that will challenge your skills, courage, and determination.\
+		Now, the file is finally unlocked. It contains detailed information about a criminal syndicate involved in trafficking narcotics into some of the European countries. The danger is real, and you know that you must take matters into your own hands.\
 		The time has come to venture out into the world, to follow the clues and confront the shadows that lurk in the darkest alleys. Armed with your newfound knowledge and a burning desire for justice, you prepare to descend into the depths of the rabbit hole. Your journey is about to begin.";
 
 		let currentWordIndex = 0;
@@ -64,14 +67,15 @@
 			if (currentWordIndex < words.length) {
 				storyParagraph.textContent += ' ' + words[currentWordIndex];
 				currentWordIndex++;
-				setTimeout(showNextWord, 475); // Adjust the delay (in milliseconds) between words.
+				setTimeout(showNextWord, 75); // Adjust the delay (in milliseconds) between words.
 			} else {
-				document.querySelector('button').style.display = 'none';
+				document.querySelector('button').style.display = 'block'; // Show the button when all words are displayed
 			}
 		}
 
 		// Automatically start showing the text when the page loads.
 		showNextWord();
 	</script>
+  <button onclick="window.location.href = 'stage-1/border-control.html'">Begin</button>
 </body>
 </html>
